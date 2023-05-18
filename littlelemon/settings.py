@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # ----------
     'rest_framework',
+    'rest_framework.authtoken',
     # ----------
     'restaurant',
+    'LittleLemonAPI',
 ]
 
 MIDDLEWARE = [
@@ -81,8 +83,12 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'meta_littleLemon_db',
+        'USER': 'admin_pbn',
+        'PASSWORD': '@admin@pbn@1380',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
